@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
+import { FormBienvenidaComponent } from './components/shared/form-bienvenida/form-bienvenida.component';
 
 import {HomeService} from './service/home.service';
 
@@ -15,7 +16,8 @@ import {HomeService} from './service/home.service';
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    FormBienvenidaComponent
   ],
   imports: [
     BrowserModule,
