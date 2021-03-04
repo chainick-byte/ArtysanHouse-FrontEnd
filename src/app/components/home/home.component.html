@@ -1,1 +1,13 @@
-<p>home works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4" style="background-color:rgb(255, 255, 255)">
+        </div>
+        <div  style="background-color:rgb(255, 255, 255)" *ngFor="let h of home;index as i">
+            <h3>{{h.titulo}} </h3>
+            <hr>
+            <p>{{h.mensaje}}</p>
+            <button type="button" class="btn btn-dark">Actualizar</button>
+        </div>
+        <div class="col-lg-4" style="background-color:rgb(255, 255, 255)"></div>
+    </div>
+</div>
