@@ -2,7 +2,7 @@
     .tomatxt {
         background: #ff6347
     }
-    
+
     .tomatxt:focus {
         background: #fff
     }
@@ -23,15 +23,25 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-lg-4" style="background-color:rgb(255, 255, 255)">
+    <div class="col-lg-3" style="background-color:rgb(255, 255, 255)">
     </div>
-    <div class="col-lg-4" style="background-color:rgb(255, 255, 255)">
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="YOUR TITLE HERE!">
-        <br>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="YOUR TEXT HERE!"></textarea>
-        <br>
-        <button type="button" class="btn btn-dark">Actualizar</button>
+    <div class="col-lg-6" style="background-color:rgb(255, 255, 255)">
+        <form (ngSubmit)="actualizar(f)" #f="ngForm" >
+            <div class="form-group">
+                <label>Titulo: </label>
+                <input type="text" class="form-control" [(ngModel)]="home.titulo" name="titulo">
+            </div>
+            <div class="form-group">
+                <label> Mensaje: </label>
+                <textarea type="text" class="form-control"[(ngModel)]="home.mensaje " name="mensaje" id="mensajeBienvenida" cols="65" rows="20"></textarea>
+            </div>
+            <hr>
+            <div class="form-group text-center">
+                <button type="submit" role="button" class="btn btn-primary w-25"> Guardar</button>
+            </div>
+        </form>
+
     </div>
-    <div class="col-lg-4" style="background-color:rgb(255, 255, 255)">
+    <div class="col-lg-3" style="background-color:rgb(255, 255, 255)">
     </div>
 </div>
